@@ -42,7 +42,10 @@ function actualizarAlumno(id, datosActualizados) {
         return null; // No se encontró el alumno
     }
     // Actualizar solo los campos enviados
-    if (datosActualizados.nombre) {
+
+    //cuando llegan los string de datosActualizados, si no se ingresó nada, el dato que llega es un undefined.
+
+    if (datosActualizados.nombre) { 
         alumno.nombre = datosActualizados.nombre;
     }
     if (datosActualizados.email) {
